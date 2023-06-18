@@ -1,8 +1,11 @@
 import React from 'react'
+import DynamicFormControl from './DynamicFormControl'
 
-const Form = () => {
+const Form = (fields) => {
   return (
-    <div>Form</div>
+    <form>
+      
+    </form>
   )
 }
 
