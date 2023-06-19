@@ -5,6 +5,7 @@ const DynamicFormControl = ({type, fieldName, defaultValue, register, config, op
     case 'text':
       return (
         <input
+          className='input-area'
           id={fieldName}
           type={type}
           defaultValue={defaultValue}
@@ -15,6 +16,7 @@ const DynamicFormControl = ({type, fieldName, defaultValue, register, config, op
     case 'email':
       return (
         <input
+          className='input-area'
           id={fieldName}
           type={type}
           defaultValue={defaultValue}
@@ -25,6 +27,7 @@ const DynamicFormControl = ({type, fieldName, defaultValue, register, config, op
     case 'date':
       return (
         <input
+          className='input-area'
           id={fieldName}
           type={type}
           defaultValue={defaultValue}
@@ -35,6 +38,7 @@ const DynamicFormControl = ({type, fieldName, defaultValue, register, config, op
     case 'password':
       return (
         <input
+          className='input-area'
           id={fieldName}
           type={type}
           defaultValue={defaultValue}
@@ -45,6 +49,7 @@ const DynamicFormControl = ({type, fieldName, defaultValue, register, config, op
     case 'select':
       return (
         <select 
+          className='input-area'
           id={fieldName}
           {...register(fieldName, {...config})}
           name={fieldName}

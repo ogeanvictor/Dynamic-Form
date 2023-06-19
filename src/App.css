@@ -1,0 +1,43 @@
+* {
+    font-family: 'Lexend Deca';
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    color: #346E83;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 28rem;
+    padding: 14px;
+    gap: 1rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.input-area {
+    height: 30px;
+}
+
+.btn {
+    background-color: #20DF7F;
+    height: 40px;
+    color: #1e5063;
+    font-size: 20px;
+    cursor: pointer;
+}

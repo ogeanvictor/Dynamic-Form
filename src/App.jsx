@@ -6,9 +6,10 @@ import './App.css';
 
 function App() {
  return (
-  <>
-    <Form fields={fields} />
-  </>
+    <div className='container'>
+      <h1>Formulários Dinâmicos</h1>
+      <Form fields={fields} />
+    </div>
  )
 }
 
