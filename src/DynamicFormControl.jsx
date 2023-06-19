@@ -1,65 +1,66 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React from 'react';
 
-const DynamicFormControl = ({type, fieldName, defaultValue, config, options}) => {
-  const { register } = useForm();
-
+const DynamicFormControl = ({type, fieldName, defaultValue, register, config, options}) => {
   switch (type) {
     case 'text':
       return (
-        <input 
-          type="text"
+        <input
+          id={fieldName}
+          type={type}
           defaultValue={defaultValue}
-          {...register(fieldName, config)}
+          {...register(fieldName, {...config})}
         />
       );
 
     case 'email':
       return (
-        <input 
-          type='email'
+        <input
+          id={fieldName}
+          type={type}
           defaultValue={defaultValue}
-          {...register(fieldName, config)}
+          {...register(fieldName, {...config})}
         />
       );
 
     case 'date':
       return (
         <input
-          type='date'
+          id={fieldName}
+          type={type}
           defaultValue={defaultValue}
-          {...register(fieldName, config)}
+          {...register(fieldName, {...config})}
         />
       );
 
-      case 'password':
-        return (
-          <input
-            type='password'
-            defaultValue={defaultValue}
-            {...register(fieldName, config)}
-          />
-        );
+    case 'password':
+      return (
+        <input
+          id={fieldName}
+          type={type}
+          defaultValue={defaultValue}
+          {...register(fieldName, {...config})}
+        />
+      );
 
-      case 'select':
-        return (
-          <select 
-            name={fieldName} 
-            id={fieldName}
-            {...register(fieldName, config)}
-          >
-            {options.map((option, index) => (
-              <option key={index} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        )
+    case 'select':
+      return (
+        <select 
+          id={fieldName}
+          {...register(fieldName, {...config})}
+          name={fieldName}
+        >
+          {options.map((option, index) => (
+            <option key={index} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      )
 
-      default:
-        return (
-          <input type='text' />
-        )
+    default:
+      return (
+        <input type='text' />
+      )
   }
 }
 

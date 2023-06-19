@@ -1,7 +1,5 @@
-import React from 'react'
-
+import React from 'react';
 import Form from './Form';
-
 import { fields } from './schema';
 
 import './App.css';

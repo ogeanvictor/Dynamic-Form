@@ -44,9 +44,9 @@ export const fields = [
             { value: 'Java', label: 'Java'},
             { value: 'Python', label: 'Python'},
         ],
-        defaultValue: '',
+        defaultValue: 'JavaScript',
         config: {
             required: true
         },
     }
-]
+];
