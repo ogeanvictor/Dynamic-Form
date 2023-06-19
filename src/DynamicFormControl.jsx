@@ -1,8 +1,8 @@
 import React from 'react'
-import { useFormContext } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
-const DynamicFormControl = (type, fieldName, defaultValue, config, options) => {
-  const register = useFormContext();
+const DynamicFormControl = ({type, fieldName, defaultValue, config, options}) => {
+  const { register } = useForm();
 
   switch (type) {
     case 'text':
